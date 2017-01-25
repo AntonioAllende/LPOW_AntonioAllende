@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Seleccion y conjunto de datos</title>
+  </head>
+  <h1>Funcionamiento de la selección de características en la minería de datos de SQL Server</h1>
+<h2><p>La selección de características siempre se realiza antes de entrenar el modelo. Con algunos algoritmos, las técnicas de selección de
+características están "integradas", de forma que las columnas irrelevantes se excluyen y se identifican automáticamente las mejores
+características. Cada algoritmo tiene su propio conjunto de técnicas predeterminadas para aplicar de forma inteligente la reducción
+de características. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de
+características.</p></h2>
+<p>
+Durante la <a href="Index.html">selección automática de características</a>, se calcula una puntuación para cada atributo y se seleccionan los atributos que
+tengan las mejores puntuaciones para el modelo. También puede ajustar el umbral para las puntuaciones más altas. SQL Server <a href="Index.html">La minería
+de datos</a> proporciona varios métodos para calcular estas puntuaciones y el método exacto que se aplica en un modelo depende de estos factores:
+</p>
+<p><ul>
+<ol><li>El algoritmo usado en el modelo</li>
+<li>El tipo de <a href="Segunda.html">datos del atributo</a></li></ol></ul>
+</p>
+<p>
+Otros parámetros que se hayan podido establecer en el modelo
+La selección de características se aplica a las entradas, a los atributos de predicción o a los estados de una columna. Una vez completada
+la puntuación para la selección de características, solo se incluyen en el proceso de generación del modelo y se pueden usar en la predicción
+los atributos y los estados que selecciona el algoritmo. Si elige un atributo de predicción que no alcanza el umbral para la selección de
+características, dicho atributo se puede usar en la predicción, pero las predicciones se basarán únicamente en las estadísticas globales
+que existen en el modelo.
+</p>
+<img src="Imagen1.jpg" height="400">
+  <body>
+
+  </body>
+</html>
